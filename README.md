@@ -1,5 +1,7 @@
 # MoodEye
 
+<img src="data/assets/img.png" alt="MoodEye Logo" width="100" align="left" style="margin-right: 10px;"/>
+
 ## Description du Projet
 **MoodEye** est une application de vision par ordinateur destinée à détecter et analyser en temps réel les émotions d'une personne en se basant sur les expressions faciales. Ce projet utilise des techniques de traitement d'images et d'apprentissage profond pour capturer des émotions telles que la joie, la tristesse, la colère, la surprise, et bien plus encore. MoodEye est conçu pour être appliqué dans des domaines tels que l'assistance client, les enquêtes de satisfaction, les études de comportement en ligne et le bien-être émotionnel.
 
