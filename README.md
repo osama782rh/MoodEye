@@ -1,38 +1,71 @@
-# AugmentFX
+# MoodEye
 
-**AugmentFX** est un projet de création de filtres de réalité augmentée avancés, conçu pour modifier l'apparence d'un visage et ajouter des éléments en direct à une vidéo. Ce projet utilise des techniques de vision par ordinateur et d'apprentissage profond pour développer des filtres interactifs et immersifs, adaptés aux applications de médias sociaux, de publicité et de jeux vidéo.
+## Description du Projet
+**MoodEye** est une application de vision par ordinateur destinée à détecter et analyser en temps réel les émotions d'une personne en se basant sur les expressions faciales. Ce projet utilise des techniques de traitement d'images et d'apprentissage profond pour capturer des émotions telles que la joie, la tristesse, la colère, la surprise, et bien plus encore. MoodEye est conçu pour être appliqué dans des domaines tels que l'assistance client, les enquêtes de satisfaction, les études de comportement en ligne et le bien-être émotionnel.
 
-## Table des matières
-- [Contexte](#contexte)
-- [Motivation](#motivation)
-- [Fonctionnalités](#fonctionnalités)
-- [Arborescence du projet](#arborescence-du-projet)
-- [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Contributeurs](#contributeurs)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
+## Objectif du Projet
+Le but de **MoodEye** est de proposer une solution performante et précise pour reconnaître un large éventail d’émotions humaines en temps réel, grâce aux techniques avancées de vision par ordinateur. Cette technologie peut être utilisée dans les applications commerciales, éducatives et de recherche.
+
+## Contributeurs
+- **Osama Rahim** - Développement des modules de détection faciale et de suivi des points clés
+- **Yassine Mernissi** - Conception du module de reconnaissance des émotions et optimisation du pipeline
+
+## Dates du Projet
+Début : 5 novembre 2024  
+Fin : 26 novembre 2024  
 
 ## Contexte
-Avec la popularité des filtres en réalité augmentée (RA) dans des applications comme Instagram, Snapchat, et TikTok, le projet **AugmentFX** vise à aller plus loin en intégrant des effets avancés et en permettant une personnalisation poussée des transformations visuelles.
+Avec l’essor de l’intelligence artificielle et de la vision par ordinateur, la reconnaissance des émotions à partir des expressions faciales est devenue un champ d'étude majeur, offrant des applications variées allant de la santé mentale aux interactions automatisées avec les clients. MoodEye vise à répondre à ces besoins par une solution légère, rapide et précise, accessible à divers secteurs.
 
 ## Motivation
-Les filtres RA améliorent l'expérience des utilisateurs et ouvrent des opportunités pour des expériences immersives dans les médias numériques. Ce projet permet de combiner créativité et compétences techniques en développant des effets visuels sophistiqués et en optimisant la transformation en temps réel, afin de proposer une solution complète pour les applications interactives.
+Comprendre les émotions en temps réel ouvre la voie à des expériences interactives et empathiques dans le numérique. MoodEye permet d’allier technologie et intelligence émotionnelle, en offrant une solution capable de capter des micro-expressions et de fournir une analyse émotionnelle fiable pour des interactions humaines améliorées.
 
-## Fonctionnalités
-- **Détection faciale et suivi des points clés** : Utilise Dlib et Mediapipe pour une détection précise et en temps réel des traits du visage.
-- **Filtres avancés** : Inclut des filtres de textures (maquillage, tatouages), des effets de lumière dynamiques, et des effets de morphing (rajeunissement, vieillissement).
-- **Intégration d’éléments 3D** : Possibilité d'ajouter des éléments 3D animés, comme des accessoires et des effets holographiques, synchronisés avec les mouvements du visage.
-- **Optimisation temps réel** : Utilise des techniques de filtrage et de réduction de latence pour garantir une fluidité optimale.
+## Objectifs Spécifiques
+1. **Détection faciale en temps réel** : Identifier et suivre avec précision les traits du visage malgré les variations d’angles ou d’expressions.
+2. **Classification des émotions** : Reconnaître et classifier un éventail d'émotions comme la joie, la tristesse, la colère, la surprise, et d'autres encore.
+3. **Suivi de l’évolution émotionnelle** : Analyser les changements émotionnels dans le temps pour obtenir une vue complète de l’expérience émotionnelle d’un individu.
+4. **Optimisation pour le temps réel** : Réduire la latence pour garantir une fluidité et une précision optimales, même sur des appareils aux capacités limitées.
 
-## Arborescence du projet
+## Technologies Utilisées
+- **Langage** : Python (compatible avec Python 3.7+)
+- **Bibliothèques principales** :
+  - **OpenCV** : Pour le traitement d'images en temps réel
+  - **Dlib** : Détection faciale et suivi des points clés
+  - **FER** : Bibliothèque de reconnaissance d'émotions
+  - **TensorFlow / PyTorch** : Entraînement et gestion des modèles de classification d’émotions
+- **Plateformes Cibles** : Systèmes de bureau et mobiles
+
+## Organisation et Calendrier du Projet
+Le projet est organisé en plusieurs phases, avec des dates spécifiques pour chaque étape afin de garantir un suivi efficace.
+
+| Étape                          | Début     | Fin       | Durée (jours) |
+|--------------------------------|-----------|-----------|---------------|
+| Initialisation et Planification| 5 nov.    | 6 nov.    | 2             |
+| Préparation des Données        | 7 nov.    | 9 nov.    | 3             |
+| Détection Faciale et Suivi     | 10 nov.   | 15 nov.   | 6             |
+| Développement du Classificateur d’Émotions | 16 nov. | 20 nov. | 5             |
+| Intégration et Optimisation    | 21 nov.   | 23 nov.   | 3             |
+| Tests et Validation Finale     | 24 nov.   | 25 nov.   | 2             |
+
+## Éléments Clés du Projet
+1. **Détection Faciale et Suivi des Points Clés** : Détecter et suivre les points du visage afin de garantir une précision élevée dans l’analyse des émotions.
+2. **Classification des Émotions** : Utiliser des algorithmes de machine learning pour classer les émotions en fonction des micro-expressions faciales.
+3. **Optimisation de la Latence** : Réduire la latence au minimum pour des résultats en temps réel, y compris sur des appareils moins performants.
+
+## Livrables du Projet
+1. **Code Source Complet** : Code structuré et documenté dans les répertoires du projet (`src/` et `tests/`).
+2. **Documentation** : Comprend un manuel d’utilisation, des guides de développeurs et une documentation API (`docs/`).
+3. **Fichiers de Configuration et de Dépendances** : `requirements.txt`, `config.yaml`, pour assurer la reproductibilité du projet.
+4. **Présentation Finale** : Inclut les objectifs, étapes de développement, résultats obtenus et propositions d’amélioration.
+5. **Lien vers le projet** : [https://github.com/osama782rh/MoodEye](https://github.com/osama782rh/MoodEye)
+
+## Arborescence du Projet
 
 ```plaintext
-AugmentFX/
+MoodEye/
 ├── data/
 │   ├── raw/                        # Données brutes (images, vidéos)
 │   ├── processed/                  # Données pré-traitées (redimensionnées, normalisées)
-│   ├── models/                     # Modèles pré-entraînés ou checkpoints pour détection
 │   └── examples/                   # Exemples de sorties pour la démo
 ├── docs/
 │   ├── project_plan.md             # Plan de projet, objectifs, feuille de route
@@ -48,33 +81,23 @@ AugmentFX/
 │   ├── detection/
 │   │   ├── face_detection.py       # Détection faciale avec OpenCV/Dlib
 │   │   ├── keypoints_detection.py  # Détection et suivi des points clés du visage
-│   │   └── expression_recognition.py # Reconnaissance des expressions faciales (si utilisée)
-│   ├── filters/
-│   │   ├── base_filter.py          # Classe de base pour les filtres RA
-│   │   ├── texture_filter.py       # Filtres appliquant des textures (tatouages, maquillage, etc.)
-│   │   ├── lighting_filter.py      # Filtres d'éclairage dynamique
-│   │   └── morphing_filter.py      # Filtres de déformation (rajeunissement, vieillissement, etc.)
-│   ├── graphics/
-│   │   ├── renderer.py             # Système de rendu pour afficher les éléments RA
-│   │   ├── object_loader.py        # Chargement et gestion des modèles 3D
-│   │   └── animation.py            # Fonctions pour animer les objets (rotation, translation, etc.)
+│   └── emotion_detection/
+│       ├── emotion_classifier.py   # Classificateur d’émotions basé sur les expressions faciales
+│       └── emotion_tracker.py      # Module pour suivre les émotions détectées au fil du temps
 │   ├── utils/
 │   │   ├── logger.py               # Configuration du système de logs
 │   │   ├── metrics.py              # Calcul des métriques de performance
 │   │   └── visualizer.py           # Fonctions d'affichage pour visualiser les sorties
-│   ├── main.py                     # Point d’entrée du projet, orchestre les modules
+│   ├── main.py                     # Point d’entrée du projet
 │   └── app.py                      # Interface utilisateur principale pour les tests
 ├── tests/
 │   ├── test_data_loader.py         # Tests pour le chargement des données
-│   ├── test_filters.py             # Tests unitaires des filtres
+│   ├── test_emotion_detection.py   # Tests unitaires de détection d’émotions
 │   ├── test_detection.py           # Tests pour la détection et le suivi des points clés
-│   └── test_renderer.py            # Tests pour le rendu des éléments RA
 ├── notebooks/
 │   ├── exploratory_analysis.ipynb  # Analyse exploratoire des données
 │   ├── model_training.ipynb        # Notebook pour l'entraînement du modèle de détection
-│   └── results_visualization.ipynb # Visualisation des résultats (exemples de transformations)
+│   └── results_visualization.ipynb # Visualisation des résultats
 ├── requirements.txt                # Liste des dépendances Python
 ├── README.md                       # Documentation générale du projet
 └── setup.py                        # Script pour l’installation du package Python
-
-                                          **Créé par 𝒪𝓈𝒶𝓂𝒶**
