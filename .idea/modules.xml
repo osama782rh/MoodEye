@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/AugmentFX.iml" filepath="$PROJECT_DIR$/.idea/AugmentFX.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/MoodEye.iml" filepath="$PROJECT_DIR$/.idea/MoodEye.iml" />
     </modules>
   </component>
 </project>
