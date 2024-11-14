@@ -1,0 +1,15 @@
+paths:
+  raw_data: "./data/raw"
+  processed_data: "./data/processed"
+  examples: "./data/examples"
+
+detection:
+  scaleFactor: 1.1
+  minNeighbors: 5
+
+emotion_detection:
+  enforce_detection: False
+  actions: ["emotion"]
+
+logging:
+  level: "INFO"

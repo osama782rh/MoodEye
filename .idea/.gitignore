@@ -1,0 +1,6 @@
+myenv/
+*.pyd
+*.dll
+*.lib
+*.exe
+src/detection/shape_predictor_68_face_landmarks.dat
