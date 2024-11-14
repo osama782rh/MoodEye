@@ -1,55 +1,58 @@
-import os
-import cv2
-import numpy as np
-from src.preprocessing.data_loader import load_images
-from src.detection.face_detection import detect_faces
-from src.emotion_detection.emotion_classifier import classify_emotion
+import tkinter as tk
+from PIL import Image, ImageTk
+from src.camera.camera import launch_camera_mode
+from src.gallery.gallerymode import launch_gallery_mode
 
 
-def process_images_in_folder(folder_path, grid_size=(4, 6), image_size=(150, 150)):
-    images = load_images(folder_path)
-    annotated_images = []
+class MainApp:
+    def __init__(self, root):
+        self.root = root
+        self.root.title("MoodEye")
+        self.show_menu()
 
-    for img_name, img in images.items():
-        faces = detect_faces(img)
-        if len(faces) == 0:
-            print(f"Aucun visage détecté dans l'image : {img_name}")
-            continue
+    def show_menu(self):
+        # Nettoyer la fenêtre
+        for widget in self.root.winfo_children():
+            widget.destroy()
 
-        for (x, y, w, h) in faces:
-            face_img = img[y:y + h, x:x + w]
-            emotion = classify_emotion(face_img)
+        # Interface du menu principal
+        self.root.geometry("400x500")
+        self.root.configure(bg="#6343a7")
 
-            # Dessiner le cadre et afficher l'émotion
-            cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-            cv2.putText(img, emotion, (x, y - 10), cv2.FONT_HERSHEY_SIMPLEX, 0.9, (36, 255, 12), 2)
+        # Ajouter le logo
+        logo_path = "./data/assets/img.png"
+        try:
+            logo = Image.open(logo_path)
+            logo = logo.resize((150, 150), Image.LANCZOS)
+            tk_logo = ImageTk.PhotoImage(logo)
+            logo_label = tk.Label(self.root, image=tk_logo, bg="#6343a7")
+            logo_label.image = tk_logo  # Conserver une référence pour éviter le garbage collection
+            logo_label.pack(pady=10)
+        except Exception as e:
+            print("Erreur lors du chargement du logo:", e)
 
-        # Redimensionner chaque image pour l'ajouter à la grille
-        img_resized = cv2.resize(img, image_size)
-        annotated_images.append(img_resized)
+        # Titre et boutons
+        title = tk.Label(self.root, text="MoodEye", font=("Helvetica", 24), bg="#6343a7", fg="white")
+        title.pack(pady=20)
 
-    # Construire la mosaïque d'images
-    display_images_grid(annotated_images, grid_size, image_size)
+        btn_camera = tk.Button(self.root, text="Caméra", command=self.start_camera_mode, font=("Helvetica", 16),
+                               bg="#3c2e6f", fg="white", width=15)
+        btn_camera.pack(pady=10)
 
+        btn_gallery = tk.Button(self.root, text="Galerie", command=self.start_gallery_mode, font=("Helvetica", 16),
+                                bg="#3c2e6f", fg="white", width=15)
+        btn_gallery.pack(pady=10)
 
-def display_images_grid(images, grid_size, image_size):
-    rows, cols = grid_size
-    grid_img = np.zeros((rows * image_size[1], cols * image_size[0], 3), dtype=np.uint8)
+    def start_camera_mode(self):
+        """Lancer le mode caméra pour détecter les émotions en direct."""
+        launch_camera_mode(self)
 
-    for idx, img in enumerate(images):
-        if idx >= rows * cols:
-            break
-        row = idx // cols
-        col = idx % cols
-        x_offset = col * image_size[0]
-        y_offset = row * image_size[1]
-        grid_img[y_offset:y_offset + image_size[1], x_offset:x_offset + image_size[0]] = img
-
-    cv2.imshow("Mosaic of Emotion Detection", grid_img)
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    def start_gallery_mode(self):
+        """Lancer le mode galerie pour sélectionner et analyser des images."""
+        launch_gallery_mode(self)
 
 
 if __name__ == "__main__":
-    folder_path = './data/assets/face/'
-    process_images_in_folder(folder_path)
+    root = tk.Tk()
+    app = MainApp(root)
+    root.mainloop()
