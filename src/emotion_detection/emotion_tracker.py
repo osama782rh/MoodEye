@@ -1,5 +1,6 @@
 from collections import deque
 
+
 class EmotionTracker:
     def __init__(self, max_length=100):
         self.emotions = deque(maxlen=max_length)

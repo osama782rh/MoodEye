@@ -5,21 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b54edb24-175f-47a1-a7fc-1bede8252b53" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/age_detection/age_classifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/camera/camera.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gallery/gallerymode.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/gender_detection/gender_classifier.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils/image_loader.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MoodEye.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MoodEye.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/detection/expression_recognition.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/detection/face_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/detection/face_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/keypoints_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/detection/keypoints_detection.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/detection/shape_predictor_68_face_landmarks.dat" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/emotion_detection/emotion_classifier.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/emotion_detection/emotion_classifier.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/emotion_detection/emotion_tracker.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/emotion_detection/emotion_tracker.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gender_detection/gender_classifier.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/animation.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/object_loader.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/graphics/renderer.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notebooks/exploratory_analysis.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notebooks/model_training.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/notebooks/results_visualization.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/data_augmentation.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/data_augmentation.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/preprocessing/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/preprocessing/model.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils/image_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/utils/image_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_data_loader.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_data_loader.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_emotion_detection.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_emotion_detection.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,13 +46,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\osama\PycharmProjects\MoodEye\src\gallery" />

@@ -1,7 +1,9 @@
 import cv2
 
+
 def resize_image(image, size=(224, 224)):
     return cv2.resize(image, size)
+
 
 def rotate_image(image, angle):
     (h, w) = image.shape[:2]
