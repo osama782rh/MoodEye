@@ -1,0 +1,1 @@
+opencv-pythondeepfacenumpytorchtensorflowdlibPyYAMLemotion_env_38 environnement de Osama
